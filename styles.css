@@ -83,15 +83,16 @@ select {
 header {
     display: flex;
     justify-content: space-between;
-    background: darkslategray;
+    background: black;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
 }
 
 footer {
     display: flex;
     justify-content: center;
-    background: lightgrey;
+    background: black;
+    color: white;
     padding: 1rem;
 }
 
@@ -116,11 +117,18 @@ a {
 
 /* Class-specific Styling */
 
+.logo {
+    max-height: 50px;
+    max-width: 50px;
+
+}
+
 .hero-section {
-    background: darkslategray;
+    width: 100%;
+    background: black;
     color: white;
-    padding: 2rem 8rem 4rem 8rem;
-    gap: 2rem;
+    padding: 1rem 12rem 4rem 12rem;
+    justify-content: center;
 }
 
 .hero-text-wrapper {
@@ -129,16 +137,44 @@ a {
     gap: 0.5rem;
 }
 
-.hero-text-wrapper > button {
-    max-width: 10rem;
-    margin-top: 1rem;
+.hero-title {
+    font-size: 2.2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
 }
 
 .hero-image {
-    min-width: 15rem;
-    min-height: auto;
-    padding: 1rem;
-    background: darkgoldenrod;
+    width: 100%;
+    max-width: 40vw;
+    min-width: 400px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.img-shadow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; 
+  border-radius: 3px;
+  box-shadow: inset 0 0 14px 14px black, inset 0 0 2px 3px black;
+  background: linear-gradient(to bottom right, rgba(0,0,255, 0.9), rgba(238,130,238, 0.7));
+}
+
+
+.hero-cta-button {
+    color: white;
+    background: black;
+    border: 1px solid white;
+    box-shadow: inset 0 0 5px white;
+    max-width: 10rem;
+    margin-top: 3rem;
 }
 
 .testimonials-section {
@@ -153,11 +189,19 @@ a {
    flex-direction: row;
    gap: 1rem;
    margin: 1rem 4rem;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+.testimonial-card {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 .testimonial-card > img {
-    min-width: 12rem;
-    min-height: 12rem;
+    width: 100%;
+    height: auto;
     border: 1px solid slateblue;
     border-radius: 8px;
     margin-bottom: 1rem;
