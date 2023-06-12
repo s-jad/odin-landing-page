@@ -9,7 +9,7 @@ The landing page project from The Odin Projects foundations course.
 - Original artist: Mackey
 - Url: https://www.cleanpng.com/png-brand-symbol-font-utilities-terminal-620807/
 
-#### Hero Background
+#### Hero Image 
 - Original artist: Pexels 
 - Url: https://pixabay.com/users/pexels-2286921/ 
 
