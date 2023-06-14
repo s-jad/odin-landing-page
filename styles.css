@@ -121,6 +121,8 @@ a {
 
 /* Class-specific Styling */
 
+/* Header and Hero Section */
+
 .logo {
     max-height: 50px;
     max-width: 50px;
@@ -174,6 +176,7 @@ a {
   background: linear-gradient(to bottom right, rgba(0,0,255, 0.9), rgba(238,130,238, 0.7));
 }
 
+/* TODO - find a less computationally expensive way to do this */
 @keyframes box-shadow {
     0% {
       box-shadow: inset 0 0 15px 15px black, inset 0 0 2px 3px black;
@@ -220,6 +223,7 @@ a {
 .hero-cta-button,
 .cta-button {
     color: white;
+    cursor: pointer;
     border: 1px solid white;
     padding: 1rem 2rem;
     border-radius: 4px;
@@ -244,13 +248,15 @@ a {
     box-shadow: inset 0 0 5px white, 0 0 8px white;
 }
 
+/* Testimonials */
+
 .testimonials-section {
+    flex-direction: column;
+    text-align: center;
     background: linear-gradient(to bottom, rgba(5,0,5, 0.9), rgba(5,0,5, 0.3)),
                 linear-gradient(to left, rgba(5,0,5, 0.9) 70%, rgba(5,0,5, 0.3));
     color: white;
     border-radius: 9px;
-    flex-direction: column;
-    text-align: center;
     margin: 14rem 6rem;
     padding: 1rem 0;
     box-shadow: inset 0 0 5px rgba(238,130,238, 0.7);
@@ -259,10 +265,10 @@ a {
 .testimonial-cards-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
-    margin: 1rem 4rem;
-    justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 4rem;
 }
 
 .testimonial-card {
@@ -284,25 +290,27 @@ a {
     height: auto;
     min-width: 150px;
     min-height: 150px;
+    margin-bottom: 1rem;
     border: 1px solid slateblue;
     border-radius: 8px;
-    margin-bottom: 1rem;
 }
+
+/* Quote */
 
 .quote-section {
     flex-direction: column;
+    gap: 0;
+    padding: 6rem;
     background: radial-gradient(rgba(10,10,10, 0.95) 60%, rgba(10,10,10, 0.1));
     color: white;
-    padding: 6rem;
-    gap: 0;
     box-shadow: inset 0 0 5px rgba(238,130,238, 0.7);
 }
 
 .quote {
     font-size: 1.4rem;
     font-weight: 400;
-    margin-left: 2rem;
     text-transform: uppercase;
+    margin-left: 2rem;
 }
 
 .quote::before {
@@ -318,13 +326,15 @@ a {
 }
 
 .quote-author {
+    align-self: right;
+    margin-top: 1rem;
+    margin-right: 10%;
     text-align: right;
     font-weight: 700;
     font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-right: 10%;
-    align-self: right;
 }
+
+/* Call-to-action */
 
 .cta-section {
     background: rgba(10,10,10, 0.9);
@@ -346,7 +356,10 @@ a {
     max-height: 5rem;
 }
 
+/* Fixed Background Text/Image */
+
 .bg-text-image {
+    /* Colors */
     --bg-blue: rgba(90,90,255, 0.8);
     --bg-pink: rgba(238,130,238, 0.8);
     --bg-orange: rgba(255,150,100, 0.8);
@@ -355,12 +368,16 @@ a {
     --bg-blue-faded: rgba(90,90,255, 0);
     --bg-pink-faded: rgba(238,130,238, 0);
     --bg-orange-faded: rgba(255,150,100, 0);
+
+    /* Size and Positioning */
     z-index: -1;
     position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
+    
+    /* Text and Background */
     font-size: 16px;
     font-weight: 600;
     white-space: pre-wrap;
