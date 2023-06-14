@@ -134,6 +134,7 @@ a {
     color: white;
     padding: 1rem 12rem 24rem 12rem;
     justify-content: center;
+    overflow: hidden;
 }
 
 .hero-text-wrapper {
@@ -165,16 +166,16 @@ a {
 }
 
 .img-shadow {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px; 
-  margin-left: 1rem;
-  border-radius: 3px;
-  animation: boxShadow 3s ease infinite;
-  box-shadow: inset 0 0 15px 15px black, inset 0 0 2px 3px black;
-  background: linear-gradient(to bottom right, rgba(0,0,255, 0.9), rgba(238,130,238, 0.7));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px; 
+    margin-left: 1rem;
+    border-radius: 3px;
+    animation: boxShadow 3s ease infinite;
+    box-shadow: inset 0 0 15px 15px black, inset 0 0 2px 3px black;
+    background: linear-gradient(to bottom right, rgba(0,0,255, 0.9), rgba(238,130,238, 0.7));
 }
 
 .img-shadow::after {
@@ -187,7 +188,7 @@ a {
     height: 100%;
     transform: perspective(2.5em) rotateX(30deg) scale(0.9, 0.15);
     filter: blur(3em);
-    animation: reflection 3s ease infinite
+    animation: reflection 3s ease infinite;
 }
 
 /* TODO - find a less computationally expensive way to do this */
@@ -225,6 +226,7 @@ a {
       box-shadow: inset 0 0 13px 13px black, inset 0 0 2px 3px black;
     }
 
+    /* Yes, the strange ordering is on purpose - meant to simulate screen flicker */
     90% {
       box-shadow: inset 0 0 15px 15px black, inset 0 0 2px 3px black;
     }
@@ -243,47 +245,48 @@ a {
     }
 
     10% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.92, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.92, 0.152);
         filter: blur(2.9em); 
     }
 
     20% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.94, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.94, 0.154);
         filter: blur(2.8em); 
     }
 
     30% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.96, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.96, 0.156);
         filter: blur(2.7em); 
     }
 
     40% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.98, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.98, 0.158);
         filter: blur(2.6em); 
     }
 
     50% {
-        transform: perspective(2.5em) rotateX(30deg) scale(1, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(1, 0.16);
         filter: blur(2.5em); 
     }
 
     60% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.98, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.98, 0.158);
         filter: blur(2.6em); 
     }
 
     70% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.96, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.96, 0.156);
         filter: blur(2.7em); 
     }
 
+    /* Yes, the strange ordering is on purpose - meant to simulate screen flicker */
     90% {
         transform: perspective(2.5em) rotateX(30deg) scale(0.9, 0.15);
         filter: blur(3em); 
     }
 
     100% {
-        transform: perspective(2.5em) rotateX(30deg) scale(0.92, 0.15);
+        transform: perspective(2.5em) rotateX(30deg) scale(0.92, 0.152);
         filter: blur(2.9em); 
     }
 }
@@ -369,9 +372,10 @@ a {
     flex-direction: column;
     gap: 0;
     padding: 6rem;
-    background: radial-gradient(rgba(10,10,10, 0.95) 60%, rgba(10,10,10, 0.1));
+    background: radial-gradient(rgba(5,0,5, 1), rgba(5,0,5, 0.95) 55%, rgba(5,0,5, 0.1));
     color: white;
     box-shadow: inset 0 0 5px rgba(238,130,238, 0.7);
+    margin-bottom: 35rem;
 }
 
 .quote {
