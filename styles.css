@@ -217,17 +217,32 @@ a {
     }
 }
 
-.hero-cta-button {
+.hero-cta-button,
+.cta-button {
     color: white;
-    background: black;
     border: 1px solid white;
     padding: 1rem 2rem;
     border-radius: 4px;
-    box-shadow: inset 0 0 5px white;
     max-width: 10rem;
+    box-shadow: inset 0 0 5px white;
+    transition: box-shadow 300ms ease-in-out,
+                scale 300ms ease-in-out,
+                margin-left 300ms ease-in-out;
+}
+
+.hero-cta-button {
+    background: black;
     margin-top: 1rem;
 }
 
+.hero-cta-button:hover,
+.hero-cta-button:focus-within,
+.cta-button:hover,
+.cta-button:focus-within {
+    margin-left: 0.25rem;
+    scale: 1.1;
+    box-shadow: inset 0 0 5px white, 0 0 8px white;
+}
 
 .testimonials-section {
     background: linear-gradient(to bottom, rgba(5,0,5, 0.9), rgba(5,0,5, 0.3)),
@@ -320,31 +335,15 @@ a {
     border-radius: 6px;
 }
 
-.cta-button {
-    color: white;
-    background: rgba(5,0,5, 0.95);
-    border: 1px solid white;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    box-shadow: inset 0 0 5px white;
-    max-width: 10rem;
-    max-height: 5rem;
-}
-
-.cta-button:focus-within,
-.cta-button:hover {
-    color: white;
-    background: rgba(5,0,5, 0.95);
-    border: 1px solid white;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    box-shadow: inset 0 0 5px white;
-    max-width: 10rem;
-}
 
 .cta-header {
     font-family: 'Press Start 2P';
     font-size: 18px;
+}
+
+.cta-button {
+    background: rgba(5,0,5, 0.95);
+    max-height: 5rem;
 }
 
 .bg-text-image {
