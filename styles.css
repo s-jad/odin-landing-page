@@ -89,7 +89,7 @@ header {
     justify-content: space-between;
     background: black;
     color: white;
-    font-size: 1.2rem;
+    font-size: max(12px, 1.2rem);
     padding: 1rem 1.5rem;
 }
 
@@ -99,7 +99,7 @@ footer {
     background: black; 
     color: white;
     padding: 1.5rem 0 1rem 0;
-    font-size: 1.2rem;
+    font-size: max(12px, 1.2rem);
 }
 
 section {
@@ -527,6 +527,7 @@ a {
     background-position: center center;
     -webkit-text-fill-color: transparent;
     background-clip: text; 
+    -moz-background-clip: text;
     -webkit-background-clip: text;
     animation: moveBackground 10s ease infinite;
 }
