@@ -44,6 +44,7 @@ body {
   font-family: 'IBM Plex Mono', sans-serif;
   font-weight: 500;
   background: black;
+  font-size: clamp(16px, 1.2rem, max(16px, 1.2rem));
 }
 
 /* A elements that don't have a class get default styles */
@@ -89,7 +90,6 @@ header {
     justify-content: space-between;
     background: black;
     color: white;
-    font-size: max(12px, 1.2rem);
     padding: 1rem 1.5rem;
 }
 
@@ -99,7 +99,6 @@ footer {
     background: black; 
     color: white;
     padding: 1.5rem 0 1rem 0;
-    font-size: max(12px, 1.2rem);
 }
 
 section {
@@ -153,11 +152,6 @@ a {
     margin-top: 1.5rem;
 }
 
-.hero-subtext {
-    font-size: 2rem;
-}
-
-
 .hero-cta-button {
     background: black;
     margin-top: 1rem;
@@ -184,45 +178,59 @@ a {
         background: linear-gradient(to bottom, rgba(0,0,0, 1) 70%, rgba(0,0,0, 0.5), rgba(0,0,0, 0.0));
         padding: 1rem 6rem 32rem 6rem;
     }
+
     .hero-title {
         margin-left: 1rem;
     }
+
     .mobile-screen-wrapper {
         margin-left: 1rem;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
     .hero-subtext {
         max-width: 30%;
         min-width: 150px;
         margin-top: 1rem;
     }
+
     .hero-cta-button {
         margin-bottom: 1rem;
         margin-top: 0;
     }
+
     .img-shadow {
         width: calc(max(30vh, 30vw) + 3.2rem);
         margin-left: 0;
         align-self: center;
     }
+
+    .cta-button {
+        margin-left: 0;
+        align-self: center;
+    }
 }
 
-@media (width < 306px) {
+@media (width < 400px) {
     ul.nav-bar {
         flex-direction: column;
     }
+
     .hero-cta-button {
-        margin-bottom: 2rem;
-        margin-right: 2rem;
+        margin-bottom: 0.3rem;
+        margin-right: 0.3rem;
     }
+
     .hero-subtext {
         margin-top: 2rem;
     }
+
     header {
         justify-content: space-evenly;
     }
+
     .logo {
         align-self: center;
     }
@@ -231,10 +239,19 @@ a {
         margin: 2rem 4rem;
         gap: 4rem;
     }
+
     .testimonials-header {
         margin-left: 1rem;
         margin-right: 1rem;
     }
+
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 .img-shadow {
@@ -378,7 +395,6 @@ a {
     padding: 1rem 2rem;
     border-radius: 4px;
     max-height: 6rem;
-    max-width: 10rem;
     box-shadow: inset 0 0 0.5rem white;
     transition: box-shadow 300ms ease-in-out,
                 scale 300ms ease-in-out,
@@ -437,7 +453,6 @@ a {
 }
 
 .testimonials-header {
-    font-size: max(12px, 2.2rem);
     margin-top: 1rem;
 }
 
@@ -449,10 +464,6 @@ a {
     margin-bottom: 1.2rem;
     border: 0.1rem solid rgba(238,130,238, 0.3);
     border-radius: 8px;
-}
-
-.testimonial {
-    font-size: max(12px, 1.2rem);
 }
 
 /* Quote */
@@ -468,21 +479,21 @@ a {
 }
 
 .quote {
-    font-size: 2.2rem;
     font-weight: 400;
     text-transform: uppercase;
     margin-left: 2rem;
+    font-size: max(20px, 2rem);
 }
 
 .quote::before {
+    font-size: max(24px, 2rem);
     content: open-quote;
-    font-size: 2rem;
     font-family: "Press Start 2P";
 }
 
 .quote::after {
     content: close-quote;
-    font-size: 2rem;
+    font-size: max(24px, 2rem);
     font-family: "Press Start 2P";
 }
 
@@ -492,7 +503,7 @@ a {
     margin-right: 10%;
     text-align: right;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: max(16px, 1.6rem);
 }
 
 /* Call-to-action */
@@ -502,7 +513,6 @@ a {
     color: white;
     justify-content: center;
     padding: 2.5rem 5rem;
-    font-size: 1.2rem;
 
     /* fixes weird 1px gap that shows up on some screen sizes */
     margin-bottom: -0.5rem;
@@ -511,7 +521,6 @@ a {
 
 .cta-header {
     font-family: 'Press Start 2P';
-    font-size: 1.8rem;
 }
 
 .cta-button {
