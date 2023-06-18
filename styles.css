@@ -254,6 +254,13 @@ a {
 
 }
 
+@media (width < 360px) {
+    .mobile-screen-wrapper {
+        gap: 2rem;
+        flex-direction: column;    
+    }
+}
+
 .img-shadow {
     position: relative;
     display: flex;
