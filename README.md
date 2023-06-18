@@ -17,21 +17,21 @@ The landing page project from The Odin Projects foundations course.
 
 #### Members Profile Photos
 
-- Image: hacker-man.jpg
+###### Image: hacker-man.jpg
 - Original artist: Sander Sammy 
 - URL: https://unsplash.com/@sammywilliams
 
 
-- Image: computer-cat.jpg
+###### Image: computer-cat.jpg
 - Original artist: Ekaterina
 - URL: https://www.pexels.com/@pit0chka/
 
 
-- Image: average-arch-user.jpg
+###### Image: average-arch-user.jpg
 - Original artist: diogodigitalart
 - URL: https://pixabay.com/users/diogodigitalart-18426893/
 
 
-- Image: robot.jpg
+###### Image: robot.jpg
 - Original artist: susan-lu4esm
 - URL: https://pixabay.com/users/susan-lu4esm-7009216/
